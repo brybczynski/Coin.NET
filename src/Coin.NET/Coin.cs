@@ -78,5 +78,51 @@ namespace Coin.NET
         public Currency Currency { get; set; }
 
         #endregion
+
+        #region Mathematical operations
+
+        /// <summary>
+        ///     Add two instances of the <see cref="Coin"/> class.
+        /// </summary>
+        /// <param name="coin1">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="coin2">An instance of the <see cref="Coin"/> class (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the sum of the values from operands.
+        /// </returns>
+        public static Coin operator +(Coin coin1, Coin coin2)
+        {
+            return Add(coin1, coin2);
+        }
+
+        /// <summary>
+        ///     Add two instances of the <see cref="Coin"/> class.
+        /// </summary>
+        /// <param name="coin1">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="coin2">An instance of the <see cref="Coin"/> class (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the sum of the values from operands.
+        /// </returns>
+        public static Coin Add(Coin coin1, Coin coin2)
+        {
+            var result = new Coin(coin1.Value + coin2.Value, coin1.Currency);
+            return result;
+        }
+
+        /// <summary>
+        ///     Add instance of the <see cref="Coin"/> class to the current <see cref="Coin"/> object.
+        /// </summary>
+        /// <param name="coin2">An instance of the <see cref="Coin"/> class.</param>
+        /// <returns>
+        ///     Current instance of the <see cref="Coin"/> class after addition operation.
+        /// </returns>
+        public Coin Add(Coin coin2)
+        {
+            Value += coin2.Value;
+            return this;
+        }
+
+        #endregion
     }
 }

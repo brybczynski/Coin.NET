@@ -1,4 +1,4 @@
-﻿using System;
+﻿using FluentAssertions;
 using TechTalk.SpecFlow;
 
 namespace Coin.NET.Tests.MathOperations
@@ -6,64 +6,72 @@ namespace Coin.NET.Tests.MathOperations
     [Binding]
     public class AddingCoinsSteps
     {
+        private const decimal Value2 = 10;
+        private const decimal Value1 = 5;
+        private const Currency Currency = NET.Currency.Euro;
+
+        private Coin _coin1;
+        private Coin _coin2;
+        private Coin _operationResult;
+
         [Given]
         public void GivenIHaveTheCoinObjectCoin1WithCurrencyC()
         {
-            ScenarioContext.Current.Pending();
+            _coin1 = new Coin(Value1, Currency);
         }
 
         [Given]
         public void GivenIHaveTheCoinObjectCoin2WithCurrencyC()
         {
-            ScenarioContext.Current.Pending();
+            _coin2 = new Coin(Value2, Currency);
         }
 
         [When]
         public void WhenIAddCoin1AndCoin2UsingAdditionOperator()
         {
-            ScenarioContext.Current.Pending();
+            _operationResult = _coin1 + _coin2;
         }
 
         [When]
         public void WhenIAddCoin1ToCoin2UsingAdditionAssignmentOperator()
         {
-            ScenarioContext.Current.Pending();
+            _coin1 += _coin2;
         }
 
         [When]
         public void WhenIAddCoin1AndCoin2UsingAdditionMethod()
         {
-            ScenarioContext.Current.Pending();
+            _operationResult = Coin.Add(_coin1, _coin2);
         }
 
         [When]
         public void WhenIAddCoin1ToCoin2UsingAdditionAssignmentMethod()
         {
-            ScenarioContext.Current.Pending();
+            _coin1.Add(_coin2);
         }
 
         [Then]
         public void ThenTheResultIsANewlyCreatedCoinObject()
         {
-            ScenarioContext.Current.Pending();
+            _operationResult.Should().BeOfType<Coin>();
         }
 
         [Then]
         public void ThenItsCurrencyIsSetToC()
         {
-            ScenarioContext.Current.Pending();
+            _operationResult.Currency.Should().Be(Currency);
         }
 
         [Then]
         public void ThenItsValueIsASumOfCoin1ValueAndCoin2Value()
         {
-            ScenarioContext.Current.Pending();
+            _operationResult.Value.Should().Be(Value1 + Value2);
         }
 
         [Then]
         public void ThenTheValueOfCoin1IsASumOfCoin1OldValueAndCoin2Value()
         {
-            ScenarioContext.Current.Pending();
+            _coin1.Value.Should().Be(Value1 + Value2);
         }
     }
 }
