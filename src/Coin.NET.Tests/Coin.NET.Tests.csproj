@@ -53,6 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChangingValue\ChangingValue.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChangingValue.feature</DependentUpon>
+    </Compile>
+    <Compile Include="ChangingValue\ChangingValueSteps.cs" />
     <Compile Include="CoinCreation\CoinCreation.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ChangingValue\ChangingValue.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ChangingValue.feature.cs</LastGenOutput>
+    </None>
     <None Include="CoinCreation\CoinCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CoinCreation.feature.cs</LastGenOutput>
