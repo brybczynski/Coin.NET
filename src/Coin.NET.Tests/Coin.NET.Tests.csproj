@@ -65,6 +65,12 @@
       <DependentUpon>CoinCreation.feature</DependentUpon>
     </Compile>
     <Compile Include="CoinCreation\CoinCreationSteps.cs" />
+    <Compile Include="MathOperations\AddingCoins.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AddingCoins.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MathOperations\AddingCoinsSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +82,10 @@
     <None Include="CoinCreation\CoinCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CoinCreation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MathOperations\AddingCoins.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>AddingCoins.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
