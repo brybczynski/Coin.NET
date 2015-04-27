@@ -71,6 +71,13 @@
       <DependentUpon>AddingCoins.feature</DependentUpon>
     </Compile>
     <Compile Include="MathOperations\AddingCoinsSteps.cs" />
+    <Compile Include="MathOperations\CommonSteps.cs" />
+    <Compile Include="MathOperations\SubtrackingCoins.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubtrackingCoins.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MathOperations\SubtrackingCoinsSteps.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -86,6 +93,10 @@
     <None Include="MathOperations\AddingCoins.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddingCoins.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MathOperations\SubtrackingCoins.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>SubtrackingCoins.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
   </ItemGroup>

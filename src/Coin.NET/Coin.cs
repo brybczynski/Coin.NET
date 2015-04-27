@@ -113,13 +113,55 @@ namespace Coin.NET
         /// <summary>
         ///     Add instance of the <see cref="Coin"/> class to the current <see cref="Coin"/> object.
         /// </summary>
-        /// <param name="coin2">An instance of the <see cref="Coin"/> class.</param>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class.</param>
         /// <returns>
         ///     Current instance of the <see cref="Coin"/> class after addition operation.
         /// </returns>
-        public Coin Add(Coin coin2)
+        public Coin Add(Coin coin)
         {
-            Value += coin2.Value;
+            Value += coin.Value;
+            return this;
+        }
+
+        /// <summary>
+        ///     Subtact one instance of the <see cref="Coin"/> class from another.
+        /// </summary>
+        /// <param name="coin1">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="coin2">An instance of the <see cref="Coin"/> class (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the difference between the values from operands.
+        /// </returns>
+        public static Coin operator -(Coin coin1, Coin coin2)
+        {
+            return Subtract(coin1, coin2);
+        }
+
+        /// <summary>
+        ///     Subtact one instance of the <see cref="Coin"/> class from another.
+        /// </summary>
+        /// <param name="coin1">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="coin2">An instance of the <see cref="Coin"/> class (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the difference between the values from operands.
+        /// </returns>
+        public static Coin Subtract(Coin coin1, Coin coin2)
+        {
+            var result = new Coin(coin1.Value - coin2.Value, coin1.Currency);
+            return result;
+        }
+
+        /// <summary>
+        ///     Subtact instance of the <see cref="Coin"/> class from the current <see cref="Coin"/> object.
+        /// </summary>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class.</param>
+        /// <returns>
+        ///     Current instance of the <see cref="Coin"/> class after subtaction operation.
+        /// </returns>
+        public Coin Subtract(Coin coin)
+        {
+            Value -= coin.Value;
             return this;
         }
 

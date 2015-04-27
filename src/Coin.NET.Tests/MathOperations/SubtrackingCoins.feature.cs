@@ -19,21 +19,21 @@ namespace Coin.NET.Tests.MathOperations
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "1.9.0.77")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("AddingCoins")]
-    public partial class AddingCoinsFeature
+    [NUnit.Framework.DescriptionAttribute("SubtrackingCoins")]
+    public partial class SubtrackingCoinsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "AddingCoins.feature"
+#line 1 "SubtrackingCoins.feature"
 #line hidden
         
         [NUnit.Framework.TestFixtureSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "AddingCoins", "As a programmer \r\nI want to add two Coin objects \r\nso that I can perform basic ma" +
-                    "th operations", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SubtrackingCoins", "As a programmer \r\nI want to subtract two Coin objects \r\nso that I can perform bas" +
+                    "ic math operations", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,10 +66,10 @@ namespace Coin.NET.Tests.MathOperations
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Addition operator")]
-        public virtual void AdditionOperator()
+        [NUnit.Framework.DescriptionAttribute("Subtraction operator")]
+        public virtual void SubtractionOperator()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Addition operator", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtraction operator", ((string[])(null)));
 #line 6
 this.ScenarioSetup(scenarioInfo);
 #line 7
@@ -77,22 +77,22 @@ this.ScenarioSetup(scenarioInfo);
 #line 8
  testRunner.And("I have the Coin object Coin2 with currency C", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 9
- testRunner.When("I add Coin1 and Coin2 using Addition Operator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I subtact Coin2 from Coin1 using Subtraction Operator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 10
  testRunner.Then("the result is a newly created Coin object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 11
  testRunner.And("its currency is set to C", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
- testRunner.And("its value is a sum of Coin1 value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("its value is a difference between Coin1 value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Addition Assignment operator")]
-        public virtual void AdditionAssignmentOperator()
+        [NUnit.Framework.DescriptionAttribute("Subtraction Assignment operator")]
+        public virtual void SubtractionAssignmentOperator()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Addition Assignment operator", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtraction Assignment operator", ((string[])(null)));
 #line 14
 this.ScenarioSetup(scenarioInfo);
 #line 15
@@ -100,18 +100,18 @@ this.ScenarioSetup(scenarioInfo);
 #line 16
  testRunner.And("I have the Coin object Coin2 with currency C", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 17
- testRunner.When("I add Coin1 to Coin2 using Addition Assignment Operator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I subtact Coin2 from Coin1 using Subtraction Assignment Operator", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 18
- testRunner.Then("the value of Coin1 is a sum of Coin1 old value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the value of Coin1 is a difference between Coin1 old value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Addition method")]
-        public virtual void AdditionMethod()
+        [NUnit.Framework.DescriptionAttribute("Subtaction method")]
+        public virtual void SubtactionMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Addition method", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtaction method", ((string[])(null)));
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 21
@@ -119,22 +119,22 @@ this.ScenarioSetup(scenarioInfo);
 #line 22
  testRunner.And("I have the Coin object Coin2 with currency C", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 23
- testRunner.When("I add Coin1 and Coin2 using Addition Method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I subtact Coin2 from Coin1 using Subtraction Method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 24
  testRunner.Then("the result is a newly created Coin object", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line 25
  testRunner.And("its currency is set to C", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 26
- testRunner.And("its value is a sum of Coin1 value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("its value is a difference between Coin1 value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Addition Assignment method")]
-        public virtual void AdditionAssignmentMethod()
+        [NUnit.Framework.DescriptionAttribute("Subtaction Assignment method")]
+        public virtual void SubtactionAssignmentMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Addition Assignment method", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtaction Assignment method", ((string[])(null)));
 #line 28
 this.ScenarioSetup(scenarioInfo);
 #line 29
@@ -142,9 +142,9 @@ this.ScenarioSetup(scenarioInfo);
 #line 30
  testRunner.And("I have the Coin object Coin2 with currency C", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 31
- testRunner.When("I add Coin1 to Coin2 using Addition Assignment Method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I subtact Coin2 from Coin1 using Subtraction Assignment Method", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 32
- testRunner.Then("the value of Coin1 is a sum of Coin1 old value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the value of Coin1 is a difference between Coin1 old value and Coin2 value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
