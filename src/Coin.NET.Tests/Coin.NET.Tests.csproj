@@ -65,13 +65,19 @@
       <DependentUpon>CoinCreation.feature</DependentUpon>
     </Compile>
     <Compile Include="CoinCreation\CoinCreationSteps.cs" />
+    <Compile Include="CommonSteps.cs" />
+    <Compile Include="LogicalOperations\ComparingCoins.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComparingCoins.feature</DependentUpon>
+    </Compile>
     <Compile Include="MathOperations\AddingCoins.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>AddingCoins.feature</DependentUpon>
     </Compile>
     <Compile Include="MathOperations\AddingCoinsSteps.cs" />
-    <Compile Include="MathOperations\CommonSteps.cs" />
+    <Compile Include="MathOperations\ComparingCoinsSteps.cs" />
     <Compile Include="MathOperations\DividingByDecimal.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -101,6 +107,10 @@
     <None Include="CoinCreation\CoinCreation.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CoinCreation.feature.cs</LastGenOutput>
+    </None>
+    <None Include="LogicalOperations\ComparingCoins.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>ComparingCoins.feature.cs</LastGenOutput>
     </None>
     <None Include="MathOperations\AddingCoins.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

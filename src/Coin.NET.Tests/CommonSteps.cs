@@ -1,7 +1,7 @@
 ﻿using FluentAssertions;
 using TechTalk.SpecFlow;
 
-namespace Coin.NET.Tests.MathOperations
+namespace Coin.NET.Tests
 {
     [Binding]
     class CommonSteps
@@ -18,6 +18,19 @@ namespace Coin.NET.Tests.MathOperations
         public static decimal Decimal { get; set; }
 
         public static Coin OperationResult { get; set; }
+        public static int ComparisonResult { get; set; }
+
+        [Given]
+        public void GivenIHaveTheCoinObjectCoin1()
+        {
+            Coin1 = new Coin();
+        }
+
+        [Given]
+        public void GivenIHaveTheCoinObjectCoin2()
+        {
+            Coin2 = new Coin();
+        }
 
         [Given]
         public void GivenIHaveTheCoinObjectCoin1WithCurrencyC()

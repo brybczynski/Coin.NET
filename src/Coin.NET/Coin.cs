@@ -249,5 +249,47 @@ namespace Coin.NET
 
         #endregion
 
+        #region Logical operations
+
+        /// <summary>
+        ///     Compare current instance of the <see cref="Coin"/> class
+        ///     to the another one.
+        /// </summary>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class.</param>
+        /// <returns>
+        ///     -1 - if current instance is lesser than provided parameter
+        ///     0 - if both are equal or the same
+        ///     1 - if current instance is greater than provided parameter
+        /// </returns>
+        public int CompareTo(Coin coin)
+        {
+            return Compare(this, coin);
+        }
+
+        /// <summary>
+        ///     Compare two instances of the <see cref="Coin"/> class.
+        /// </summary>
+        /// <param name="coin1">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="coin2">An instance of the <see cref="Coin"/> class (second operand).</param>
+        /// <returns>
+        ///     -1 - if first instance is lesser than the second one
+        ///     0 - if both are equal or the same
+        ///     1 - if first instance is greater than the second one
+        /// </returns>
+        public static int Compare(Coin coin1, Coin coin2)
+        {
+            if (coin1 == coin2)
+                return 0;
+
+            if (coin1.Value > coin2.Value)
+                return 1;
+
+            if (coin1.Value < coin2.Value)
+                return -1;
+
+            return 0;
+        }
+
+        #endregion
     }
 }
