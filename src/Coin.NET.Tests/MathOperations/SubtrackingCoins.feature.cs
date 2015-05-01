@@ -108,10 +108,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Subtaction method")]
-        public virtual void SubtactionMethod()
+        [NUnit.Framework.DescriptionAttribute("Subtraction method")]
+        public virtual void SubtractionMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtaction method", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtraction method", ((string[])(null)));
 #line 20
 this.ScenarioSetup(scenarioInfo);
 #line 21
@@ -131,10 +131,10 @@ this.ScenarioSetup(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Subtaction Assignment method")]
-        public virtual void SubtactionAssignmentMethod()
+        [NUnit.Framework.DescriptionAttribute("Subtraction Assignment method")]
+        public virtual void SubtractionAssignmentMethod()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtaction Assignment method", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtraction Assignment method", ((string[])(null)));
 #line 28
 this.ScenarioSetup(scenarioInfo);
 #line 29

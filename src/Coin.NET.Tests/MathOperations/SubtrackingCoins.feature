@@ -17,7 +17,7 @@ Scenario: Subtraction Assignment operator
 	When I subtact Coin2 from Coin1 using Subtraction Assignment Operator
 	Then the value of Coin1 is a difference between Coin1 old value and Coin2 value
 
-Scenario: Subtaction method
+Scenario: Subtraction method
 	Given I have the Coin object Coin1 with currency C
 	And I have the Coin object Coin2 with currency C
 	When I subtact Coin2 from Coin1 using Subtraction Method
@@ -25,7 +25,7 @@ Scenario: Subtaction method
 	And its currency is set to C
 	And its value is a difference between Coin1 value and Coin2 value
 
-Scenario: Subtaction Assignment method
+Scenario: Subtraction Assignment method
 	Given I have the Coin object Coin1 with currency C
 	And I have the Coin object Coin2 with currency C
 	When I subtact Coin2 from Coin1 using Subtraction Assignment Method

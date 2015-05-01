@@ -166,6 +166,47 @@ namespace Coin.NET
         }
 
         /// <summary>
+        ///     Multiply instance of the <see cref="Coin"/> class by the decimal number.
+        /// </summary>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="decimalNumber">A decimal number (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the multiplication of the value of first parameter and provided decimal number.
+        /// </returns>
+        public static Coin operator *(Coin coin, decimal decimalNumber)
+        {
+            return Multiply(coin, decimalNumber);
+        }
+
+        /// <summary>
+        ///     Multiply instance of the <see cref="Coin"/> class by the decimal number.
+        /// </summary>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="decimalNumber">A decimal number (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the multiplication of the value of first parameter and provided decimal number.
+        /// </returns>
+        public static Coin Multiply(Coin coin, decimal decimalNumber)
+        {
+            return new Coin(coin.Value * decimalNumber, coin.Currency);
+        }
+
+        /// <summary>
+        ///     Multiply current instance of the <see cref="Coin"/> class by the decimal number.
+        /// </summary>
+        /// <param name="decimalNumber">A decimal number.</param>
+        /// <returns>
+        ///     Current instance of the <see cref="Coin"/> class after multiplication operation.
+        /// </returns>
+        public Coin MultiplyBy(decimal decimalNumber)
+        {
+            Value *= decimalNumber;
+            return this;
+        }
+
+        /// <summary>
         ///     Divide instance of the <see cref="Coin"/> class by the decimal number.
         /// </summary>
         /// <param name="coin">An instance of the <see cref="Coin"/> class (first operand).</param>

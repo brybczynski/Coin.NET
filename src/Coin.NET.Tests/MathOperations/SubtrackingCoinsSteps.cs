@@ -22,7 +22,7 @@ namespace Coin.NET.Tests.MathOperations
         [When]
         public void WhenISubtactCoin2FromCoin1UsingSubtractionMethod()
         {
-            Coin.Subtract(CommonSteps.Coin1, CommonSteps.Coin2);
+            CommonSteps.OperationResult = Coin.Subtract(CommonSteps.Coin1, CommonSteps.Coin2);
         }
 
         [When]
