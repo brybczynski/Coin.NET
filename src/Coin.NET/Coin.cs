@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 
@@ -7,7 +8,7 @@ namespace Coin.NET
     ///     A representation of object, which can store some amount of money and automatically perform
     ///     any needed conversion between currencies.
     /// </summary>
-    public class Coin
+    public class Coin : IComparable<Coin>
     {
         private static readonly Dictionary<string, Currency> CurrencyIsoSymbolMapper = new Dictionary<string, Currency>
         {
