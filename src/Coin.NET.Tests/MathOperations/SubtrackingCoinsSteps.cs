@@ -32,7 +32,7 @@ namespace Coin.NET.Tests.MathOperations
         }
 
         [Then]
-        public void ThenItsValueIsADifferenceBetweenCoin1ValueAndCoin1Value()
+        public void ThenItsValueIsADifferenceBetweenCoin1ValueAndCoin2Value()
         {
             CommonSteps.OperationResult.Value.Should()
                 .Be(CommonSteps.Value1 - CommonSteps.Value2);

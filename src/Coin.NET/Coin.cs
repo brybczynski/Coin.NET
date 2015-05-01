@@ -165,6 +165,48 @@ namespace Coin.NET
             return this;
         }
 
+        /// <summary>
+        ///     Divide instance of the <see cref="Coin"/> class by the decimal number.
+        /// </summary>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="decimalNumber">A decimal number (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the division of the value of first parameter and provided decimal number.
+        /// </returns>
+        public static Coin operator /(Coin coin, decimal decimalNumber)
+        {
+            return Divide(coin, decimalNumber);
+        }
+
+        /// <summary>
+        ///     Divide instance of the <see cref="Coin"/> class by the decimal number.
+        /// </summary>
+        /// <param name="coin">An instance of the <see cref="Coin"/> class (first operand).</param>
+        /// <param name="decimalNumber">A decimal number (second operand).</param>
+        /// <returns>
+        ///     A new instance of the <see cref="Coin"/> class,
+        ///     whose value is the division of the value of first parameter and provided decimal number.
+        /// </returns>
+        public static Coin Divide(Coin coin, decimal decimalNumber)
+        {
+            return new Coin(coin.Value / decimalNumber, coin.Currency);
+        }
+
+        /// <summary>
+        ///     Divide current instance of the <see cref="Coin"/> class by the decimal number.
+        /// </summary>
+        /// <param name="decimalNumber">A decimal number.</param>
+        /// <returns>
+        ///     Current instance of the <see cref="Coin"/> class after division operation.
+        /// </returns>
+        public Coin DivideBy(decimal decimalNumber)
+        {
+            Value /= decimalNumber;
+            return this;
+        }
+
         #endregion
+
     }
 }

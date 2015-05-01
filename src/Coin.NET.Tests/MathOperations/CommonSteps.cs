@@ -9,9 +9,13 @@ namespace Coin.NET.Tests.MathOperations
         public const decimal Value2 = 10;
         public const decimal Value1 = 50;
         public const Currency Currency = NET.Currency.Euro;
+        public const decimal DecimalValue = 5;
 
+        public static Coin Coin { get; set; }
         public static Coin Coin1 { get; set; }
         public static Coin Coin2 { get; set; }
+
+        public static decimal Decimal { get; set; }
 
         public static Coin OperationResult { get; set; }
 
@@ -27,10 +31,25 @@ namespace Coin.NET.Tests.MathOperations
             Coin2 = new Coin(Value2, Currency);
         }
 
+        [Given]
+        public void GivenIHaveTheCoinObjectCoinWithCurrencyC()
+        {
+            Coin = new Coin(Value1, Currency);
+        }
+
+        [Given]
+        public void GivenIHaveSomeDecimalValueD()
+        {
+            Decimal = DecimalValue;
+        }
+
         [Then]
         public void ThenTheResultIsANewlyCreatedCoinObject()
         {
             OperationResult.Should().BeOfType<Coin>();
+            OperationResult.Should().NotBeSameAs(Coin);
+            OperationResult.Should().NotBeSameAs(Coin1);
+            OperationResult.Should().NotBeSameAs(Coin2);
         }
 
         [Then]

@@ -72,6 +72,12 @@
     </Compile>
     <Compile Include="MathOperations\AddingCoinsSteps.cs" />
     <Compile Include="MathOperations\CommonSteps.cs" />
+    <Compile Include="MathOperations\DividingByDecimal.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DividingByDecimal.feature</DependentUpon>
+    </Compile>
+    <Compile Include="MathOperations\DividingByDecimalSteps.cs" />
     <Compile Include="MathOperations\SubtrackingCoins.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,6 +99,10 @@
     <None Include="MathOperations\AddingCoins.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>AddingCoins.feature.cs</LastGenOutput>
+    </None>
+    <None Include="MathOperations\DividingByDecimal.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>DividingByDecimal.feature.cs</LastGenOutput>
     </None>
     <None Include="MathOperations\SubtrackingCoins.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
